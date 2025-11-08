@@ -80,6 +80,10 @@
 
         // Extract relevant info
         const abilities = data.abilities.map(a => a.ability.name).join(', ');
+        
+        // MOVES
+        const moves = data.moves.map(a => a.move.name).join(', ');
+
         const hp = data.stats.find(stat => stat.stat.name === "hp").base_stat;
         
         const image = data.sprites.front_default;
@@ -91,6 +95,7 @@
             <img src="${image}" alt="${data.name}">
             <p><strong>HP:</strong> ${hp}</p>
             <p><strong>Abilities:</strong> ${abilities}</p>
+            <p><strong>Move:</strong> ${moves}</p>
             <p><strong>Description:</strong> ${description}</p>
           </div>
         `;
